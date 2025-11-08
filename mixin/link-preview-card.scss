@@ -1,8 +1,13 @@
-@mixin link-preview-card($colorText: $color-text-light, $colorAccent: $color-accent-light, $colorBackground: $color-accent-light) {
+@import '../foundation/colorscheme';
+
+@use 'sass:color';
+
+@mixin link-preview-card($colorText: $color-text-light, $colorAccent: $color-accent-light, $colorBackground: $color-background-light, $colorTitle: $color-text-light) {
+
   .link-preview-card{
     display: flex;
   flex-direction: column;
-  background: #fff;
+  background: $colorBackground;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -19,7 +24,7 @@
   .link-preview-image-container {
     width: 100%;
     overflow: hidden;
-    background: #f8f8f8;
+    background: $colorBackground;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +56,7 @@
     .link-preview-title {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #007bff;
+      color: $colorTitle;
       text-decoration: none;
       margin-bottom: 0.5rem;
       word-wrap: break-word;
@@ -76,7 +81,7 @@
     text-align: center;
     color: #e74c3c;
     font-weight: 500;
-    background: #fff8f8;
+    background: $colorBackground;
     border: 1px solid #f5c6cb;
     border-radius: 8px;
     margin-top: 1rem;

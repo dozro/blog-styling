@@ -1,15 +1,16 @@
-@import 'vars.scss';
+@import 'foundation/vars';
+@import 'foundation/colorscheme';
 @import 'mixin/link-preview-card.scss';
 
 $height: 250px;
 $width: 600px;
 
 @mixin link-preview-light(){
-    @include link-preview-card($color-text-light, $color-muted-light);
+    @include link-preview-card($color-text-light, $color-muted-light, $color-background-light, $color-title-light);
 }
 
 @mixin link-preview-dark(){
-    @include link-preview-card($color-text-dark, $color-muted-dark);
+    @include link-preview-card($color-text-dark, $color-muted-dark, $color-background-dark, $color-title-dark);
 }
 
 

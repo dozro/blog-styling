@@ -1,13 +1,15 @@
+@use 'sass:color';
+
 // Light mode colors
 $color-text-light: #3D1D1D;
 $color-accent-light: #DCA1A1;
+$color-background-light: #ffc0c0;
 $color-muted-light: #666;
+$color-title-light: #3D1D1D;
 
 // Dark mode colors
 $color-text-dark: #DCA1A1;
 $color-accent-dark: #ffd6d6b0;
+$color-background-dark: #6b5959b0;
 $color-muted-dark: #FFD6D6;
-
-// Typography & spacing
-$font-stack: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-$spacing-unit: 1rem;
+$color-title-dark: #a7904a;
