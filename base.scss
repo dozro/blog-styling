@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+@import 'vars.scss';
+
+// global box-sizing fix (recommended site-wide)
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+@mixin dark{
+    .taglist {
+        color: $color-muted-dark;
+        a {
+            color: $color-accent-dark;
+            &:hover {
+               color: lighten($color-accent-dark, 10%);
+            }
+        }
+    }
+    .date{
+        .dateLabel{
+            color: $color-muted-dark;
+        }
+        .dateValue{
+            color: $color-accent-dark;
+        }
+    }
+}
+
+.colorscheme-dark{
+    @include dark;
+}
+
+@media (prefers-color-scheme: dark) {
+@include dark;
+}
+
+.taglist {
+  font-size: 11pt;
+  color: $color-muted-light;
+  margin-top: 0.5rem;
+
+  a {
+    color: $color-accent-light;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+.date {
+    .dateLabel{
+        color: $color-muted-light;
+    }
+    .dateValue{
+        color: $color-accent-light;
+    }
+    font-size: 11pt;
+    margin-top: 0.5rem;
+}

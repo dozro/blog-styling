@@ -1,0 +1,29 @@
+@import 'vars.scss';
+@import 'mixin/link-preview-card.scss';
+
+$height: 250px;
+$width: 600px;
+
+@mixin link-preview-light(){
+    @include link-preview-card($color-text-light, $color-muted-light);
+}
+
+@mixin link-preview-dark(){
+    @include link-preview-card($color-text-dark, $color-muted-dark);
+}
+
+
+.colorscheme-dark{
+    @include link-preview-dark;
+}
+.colorscheme-light{
+    @include link-preview-light;
+}
+
+@media (prefers-color-scheme: light){
+    @include link-preview-light;
+}
+
+@media (prefers-color-scheme: dark) {
+    @include link-preview-dark;
+}
