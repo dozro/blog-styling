@@ -35,6 +35,19 @@
     @include dark;
 }
 
+#permalink{
+    a {
+        i {
+            color: $color-muted-light;
+        }
+        &:hover,
+        &:focus {
+            color: $color-accent-light;
+            text-decoration: none;
+        }
+    }
+}
+
 .taglist {
   font-size: 11pt;
   color: $color-muted-light;
