@@ -38,11 +38,11 @@
 #permalink{
     a {
         i {
-            color: $color-muted-light;
+            color: $color-accent-light;
         }
         &:hover,
         &:focus {
-            color: $color-accent-light;
+            color: $color-muted-light;
             text-decoration: none;
         }
     }
@@ -68,6 +68,22 @@
     font-size: 11pt;
     margin-top: 0.5rem;
     color: $color-muted-light;
+}
+
+#quoteThisPage {
+    font-size: 11pt;
+    margin-top: 0.5rem;
+    color: $color-muted-light;
+    background: transparent;
+    border: none;
+    i {
+        color: $color-accent-light;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
 }
 
 .date {
