@@ -1,0 +1,35 @@
+@mixin metaInfo {
+    font-size: 11pt;
+    margin-top: 0.5rem;
+    color: $color-muted-light;
+    background: transparent;
+    border: none;
+
+    i {
+        color: $color-accent-light;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    a {
+        color: $color-accent-light;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    @media(prefers-color-scheme: dark) {
+        color: $color-muted-dark;
+
+        i {
+            color: $color-accent-dark;
+        }
+    }
+}

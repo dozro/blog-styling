@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
 @import 'foundation/vars';
 @import 'foundation/colorscheme';
+@import 'mixin/meta-info';
 
 // global box-sizing fix (recommended site-wide)
 *, *::before, *::after {
@@ -36,54 +37,25 @@
 }
 
 #permalink{
-    a {
-        i {
-            color: $color-accent-light;
-        }
-        &:hover,
-        &:focus {
-            color: $color-muted-light;
-            text-decoration: none;
-        }
-    }
+    @include metaInfo;
 }
 
 .taglist {
   font-size: 11pt;
-  color: $color-muted-light;
+  @include metaInfo;
   margin-top: 0.5rem;
-
-  a {
-    color: $color-accent-light;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
 }
 
 .archivalPermission {
-    font-size: 11pt;
-    margin-top: 0.5rem;
-    color: $color-muted-light;
+    @include metaInfo;
 }
 
-#quoteThisPage {
-    font-size: 11pt;
-    margin-top: 0.5rem;
-    color: $color-muted-light;
-    background: transparent;
-    border: none;
-    i {
-        color: $color-accent-light;
-        text-decoration: none;
-        &:hover,
-        &:focus {
-            text-decoration: underline;
-        }
-    }
+#quoteThisPage{
+    @include metaInfo;
+}
+
+#content-license {
+    @include metaInfo;
 }
 
 .date {
