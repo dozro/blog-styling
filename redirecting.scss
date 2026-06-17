@@ -1,0 +1,24 @@
+@import 'foundation/vars';
+@import 'foundation/colorscheme';
+
+body {
+  background-color: $color-background-dark;
+  color: $color-text-light;
+  font-family: $font-stack;
+  @media (prefers-color-scheme: light) {
+    background-color: $color-background-light;
+    color: $color-text-dark;
+  }
+  #redirectNotice {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20vh;
+    a {
+      color: $color-accent-light;
+      text-decoration: none;
+      @media (prefers-color-scheme: light) {
+        color: $color-accent-dark;
+      }
+    }
+  }
+}
